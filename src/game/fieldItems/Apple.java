@@ -2,9 +2,12 @@ package game.fieldItems;
 
 import game.Player;
 
-public class Apple implements IFieldItem {
+import java.awt.*;
 
-    public void onCollision(Player player) {
+public class Apple extends fieldItem {
 
+    public void onCollision(Player player, boolean isGameOver) {
+        player.score += 100;
+        player.snake.add(player.getHead());
     }
 }
