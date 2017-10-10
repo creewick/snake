@@ -1,8 +1,8 @@
 package game;
 
-import com.sun.glass.ui.Size;
 import game.fieldItems.Apple;
 import game.fieldItems.fieldItem;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ public class Level {
 
     public HashSet<fieldItem> field;
 
-    public Size size;
+    public Point size;
 
     public void GenerateApple(int count) {
         List<Point> freeCells = new ArrayList<Point>();
-        for (int x = 0; x < size.width; x++) {
-            for (int y = 0; y < size.height; y++) {
+        for (int x = 0; x < size.x; x++) {
+            for (int y = 0; y < size.y; y++) {
                 freeCells.add(new Point(x, y));
             }
         }

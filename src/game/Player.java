@@ -5,6 +5,12 @@ import java.util.List;
 
 public class Player {
 
+    public Player(List<Point> snake, Point velocity, int score){
+        this.snake = snake;
+        this.score = score;
+        this.velocity = velocity;
+    }
+
     public List<Point> snake;
 
     public Point velocity;
