@@ -11,24 +11,22 @@ public class Game {
     public Level currentLevel;
 
     public Game(List<Player> players, List<Level> levels) {
+
         this.players = players;
+        this.levels = levels;
     }
 
     private List<Level> levels;
 
-    private List<Player> players;
+    public List<Player> players;
 
-    boolean isGameOver;
+    public void nextStep(Point direction, Player currentPlayer) {
+        currentPlayer.moveSnake(direction);
 
-    public void nextStep(Point direction) {
-        for (Player player : this.players)
-            player.moveSnake(direction);
-
-        for (Player player : players){
+        for (Player player : players)
             for (fieldItem item : currentLevel.field) {
                 if (item.position.equals(player.getHead()))
-                    item.onCollision(player, isGameOver);
+                    item.onCollision(currentPlayer);
             }
-        }
     }
 }

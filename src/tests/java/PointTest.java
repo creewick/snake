@@ -21,4 +21,13 @@ public class PointTest {
         assertEquals(thirdPoint.y, 6);
     }
 
+    @Test
+    public void hashCodeTest(){
+        Point firstPoint = new Point(1, 1);
+        Point secondPoint = new Point(1, 2);
+        Point thirdPoint = new Point(1, 2);
+        assertEquals(false, firstPoint.hashCode() == secondPoint.hashCode());
+        assertEquals(thirdPoint.hashCode(), secondPoint.hashCode());
+    }
+
 }

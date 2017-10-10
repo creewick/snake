@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.util.HashSet;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class LevelTest{
 
@@ -24,7 +25,7 @@ public class LevelTest{
         firstWall.position = new Point(0, 1);
 
         Wall secondWall = new Wall();
-        firstWall.position = new Point(1, 0);
+        secondWall.position = new Point(1, 0);
 
         newLevel.field.add(greenApple);
         newLevel.field.add(firstWall);
@@ -32,10 +33,14 @@ public class LevelTest{
 
         newLevel.GenerateApple(1);
 
-        for (fieldItem item : newLevel.field){
-            if (item.position.equals(new Point(1, 1)))
-                assertEquals(item.getClass() == greenApple.getClass(), true);
+        boolean flag = false;
 
+        for (fieldItem item : newLevel.field){
+            //System.out.println(item);
+            if (item.position.equals(new Point(1, 1)))
+                if (item instanceof Apple)
+                    flag = true;
         }
+        assertTrue(flag);
     }
 }

@@ -6,24 +6,23 @@ import java.util.List;
 
 public class Player {
 
-    public Player(List<Point> snake, Point velocity, int score){
+    public Player(List<Point> snake, int score){
         this.snake = snake;
         this.score = score;
-        this.velocity = velocity;
     }
 
     public List<Point> snake;
 
-    public Point velocity;
-
     public int score;
+
+    public boolean isGameOver;
 
     public Point getHead() {
         return snake.get(snake.size() - 1);
     }
 
     public void moveSnake(Point direction) {
-        snake.remove(0);
-        snake.add(getHead().sum(direction));
+        this.snake.remove(0);
+        this.snake.add(getHead().sum(direction));
     }
 }

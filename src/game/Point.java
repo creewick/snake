@@ -10,7 +10,14 @@ public class Point {
     public int x, y;
 
     public boolean equals(Point point) {
-        return x == point.x && y == point.y;
+        return this.x == point.x && this.y == point.y;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        String str = this.x + "," + this.y;
+        return str.hashCode();
     }
 
     public Point sum(Point point) {

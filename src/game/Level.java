@@ -16,18 +16,22 @@ public class Level {
     public Point size;
 
     public void GenerateApple(int count) {
-        List<Point> freeCells = new ArrayList<Point>();
+        List<Point> freeCells = new ArrayList<>();
         for (int x = 0; x < size.x; x++) {
             for (int y = 0; y < size.y; y++) {
-                freeCells.add(new Point(x, y));
+                boolean flag = false;
+                for (fieldItem item : field) {
+                    if (item.position.x == x && item.position.y == y) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    freeCells.add(new Point(x, y));
+                }
             }
         }
-        for (fieldItem item : field) {
-            for (Point cell : freeCells) {
-                if (cell.equals(item.position))
-                    freeCells.remove(cell);
-            }
-        }
+
         Point freePoint = freeCells.get(ThreadLocalRandom.current().nextInt(0, freeCells.size()));
         Apple apple = new Apple();
         apple.position = new Point(freePoint.x, freePoint.y);

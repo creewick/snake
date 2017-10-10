@@ -5,7 +5,7 @@ import game.Point;
 
 public abstract class fieldItem {
 
-    public abstract void onCollision(Player player, boolean isGameOver);
+    public abstract void onCollision(Player player);
 
     public Point position;
 }

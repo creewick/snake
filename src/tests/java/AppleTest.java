@@ -20,10 +20,10 @@ public class AppleTest {
         snake.add(new Point(0, 1));
         snake.add(new Point(0, 2));
         snake.add(new Point(1, 2));
-        Player player = new Player(snake, new Point(1, 0), 0);
+        Player player = new Player(snake, 0);
 
         Apple greenApple = new Apple();
-        greenApple.onCollision(player, true);
+        greenApple.onCollision(player);
         assertEquals(100, player.score);
         assertEquals(snake.size(), 5);
 
