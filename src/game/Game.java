@@ -1,7 +1,9 @@
 package game;
 
+import game.fieldItems.SnakePart;
 import game.fieldItems.fieldItem;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.List;
 
@@ -20,13 +22,32 @@ public class Game {
 
     public List<Player> players;
 
+    public List<SnakePart> getAllSnakeItems(Player currentPlayer){
+        List<SnakePart> snakeParts = new ArrayList<>();
+        for (Player player : players){
+            for (SnakePart snakePart : player.snake){
+                snakeParts.add(snakePart);
+            }
+        }
+        snakeParts.remove(currentPlayer.getHead());
+        return snakeParts;
+    }
+
     public void nextStep(Point direction, Player currentPlayer) {
-        currentPlayer.moveSnake(direction);
+        currentPlayer.moveSnake(direction, currentLevel);
+
+        for (SnakePart snakePart : this.getAllSnakeItems(currentPlayer)){
+            if (snakePart.position.equals(currentPlayer.getHead()))
+                snakePart.onCollision(currentPlayer, currentLevel);
+        }
 
         for (Player player : players)
             for (fieldItem item : currentLevel.field) {
-                if (item.position.equals(player.getHead()))
-                    item.onCollision(currentPlayer);
+                if (item.position.equals(player.getHead().position))
+                    item.onCollision(currentPlayer, currentLevel);
             }
+
+
+
     }
 }

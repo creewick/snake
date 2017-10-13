@@ -14,8 +14,7 @@ public class LevelTest{
 
     @Test
     public void generateApple() throws Exception {
-        Level newLevel = new Level();
-        newLevel.size = new Point(2, 2);
+        Level newLevel = new Level(2, 2);
         newLevel.field = new HashSet<fieldItem>();
 
         Apple greenApple = new Apple();

@@ -16,11 +16,16 @@ public class Point {
     @Override
     public int hashCode()
     {
-        String str = this.x + "," + this.y;
+        String str = this.x + "/" + this.y;
         return str.hashCode();
     }
 
     public Point sum(Point point) {
         return new Point(x + point.x, y + point.y);
+    }
+
+    public void loopingInTheField(int x, int y){
+        this.x = this.x % x;
+        this.y = this.y % y;
     }
 }

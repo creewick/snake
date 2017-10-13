@@ -1,12 +1,8 @@
 package game;
 
-import game.fieldItems.Apple;
-import game.fieldItems.fieldItem;
+import game.fieldItems.*;
 
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashSet;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Level {
@@ -14,6 +10,10 @@ public class Level {
     public HashSet<fieldItem> field;
 
     public Point size;
+
+    public Level(int x, int y){
+        this.size = new Point(x, y);
+    }
 
     public void GenerateApple(int count) {
         List<Point> freeCells = new ArrayList<>();
@@ -30,6 +30,10 @@ public class Level {
                     freeCells.add(new Point(x, y));
                 }
             }
+        }
+
+        if (freeCells.size() == 0){
+            return;
         }
 
         Point freePoint = freeCells.get(ThreadLocalRandom.current().nextInt(0, freeCells.size()));
