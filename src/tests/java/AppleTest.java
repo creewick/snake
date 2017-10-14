@@ -25,7 +25,7 @@ public class AppleTest {
         snake.add(new SnakePart(1, 2));
         Player player = new Player(snake);
 
-        Apple greenApple = new Apple();
+        Apple greenApple = new Apple(1, 2);
         Level level = new Level(3, 3);
         level.field = new HashSet<fieldItem>();
         level.field.add(greenApple);

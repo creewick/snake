@@ -14,21 +14,18 @@ public class GameTest {
         snake.add(new SnakePart(0, 1));
         Player player = new Player(snake);
 
-        Apple redApple = new Apple();
-        redApple.position = new Point(1, 1);
-        Wall wall = new Wall();
-        wall.position = new Point(2, 1);
+        Apple redApple = new Apple(1, 1);
+        Wall wall = new Wall(2, 1);
 
         Level level = new Level(3, 3);
-        level.field = new HashSet<fieldItem>();
+        level.field = new HashSet<>();
         level.field.add(redApple);
         level.field.add(wall);
         List<Level> levels = Arrays.asList(level);
         List<Player> players = Arrays.asList(player);
 
         Game game = new Game(players, levels);
-        game.currentLevel = level;
-
+        game.currentLevel = game.levels.get(0);
 
         game.nextStep(new Point(1, 0), player);
         game.nextStep(new Point(1, 0), player);

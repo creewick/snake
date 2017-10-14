@@ -17,14 +17,11 @@ public class LevelTest{
         Level newLevel = new Level(2, 2);
         newLevel.field = new HashSet<fieldItem>();
 
-        Apple greenApple = new Apple();
-        greenApple.position = new Point(0, 0);
+        Apple greenApple = new Apple(0, 0);
 
-        Wall firstWall = new Wall();
-        firstWall.position = new Point(0, 1);
+        Wall firstWall = new Wall(0, 1);
 
-        Wall secondWall = new Wall();
-        secondWall.position = new Point(1, 0);
+        Wall secondWall = new Wall(1, 0);
 
         newLevel.field.add(greenApple);
         newLevel.field.add(firstWall);

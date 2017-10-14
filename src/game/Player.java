@@ -9,15 +9,18 @@ import java.util.List;
 
 public class Player {
 
-    public Player(List<SnakePart> snake){
-        this.snake = snake;
-    }
-
     public List<SnakePart> snake;
 
     public int score;
 
     public boolean isGameOver;
+
+    public Player(List<SnakePart> snake){
+
+        this.snake = snake;
+        this.score = 0;
+        this.isGameOver = false;
+    }
 
     public SnakePart getHead() {
         return snake.get(snake.size() - 1);
@@ -28,8 +31,6 @@ public class Player {
         position.loopingInTheField(level.size.x, level.size.y);
         SnakePart head = new SnakePart(position.x, position.y);
         this.snake.add(head);
-        level.field.add(head);
-        level.field.remove(snake.get(0));
         this.snake.remove(0);
     }
 }

@@ -37,8 +37,7 @@ public class Level {
         }
 
         Point freePoint = freeCells.get(ThreadLocalRandom.current().nextInt(0, freeCells.size()));
-        Apple apple = new Apple();
-        apple.position = new Point(freePoint.x, freePoint.y);
+        Apple apple = new Apple(freePoint.x, freePoint.y);
         field.add(apple);
     }
 }

@@ -18,7 +18,7 @@ public class Game {
         this.levels = levels;
     }
 
-    private List<Level> levels;
+    public List<Level> levels;
 
     public List<Player> players;
 
@@ -37,7 +37,7 @@ public class Game {
         currentPlayer.moveSnake(direction, currentLevel);
 
         for (SnakePart snakePart : this.getAllSnakeItems(currentPlayer)){
-            if (snakePart.position.equals(currentPlayer.getHead()))
+            if (snakePart.position.equals(currentPlayer.getHead().position))
                 snakePart.onCollision(currentPlayer, currentLevel);
         }
 
