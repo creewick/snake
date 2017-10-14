@@ -15,7 +15,7 @@ public class Level {
         this.size = new Point(x, y);
     }
 
-    public void GenerateApple(int count) {
+    public void generateApple(int count) {
         List<Point> freeCells = new ArrayList<>();
         for (int x = 0; x < size.x; x++) {
             for (int y = 0; y < size.y; y++) {

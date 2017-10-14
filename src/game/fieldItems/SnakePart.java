@@ -9,6 +9,6 @@ public class SnakePart extends fieldItem {
     }
 
     public void onCollision(Player player, Level level) {
-        player.isGameOver = true;
+        player.Kill();
     }
 }

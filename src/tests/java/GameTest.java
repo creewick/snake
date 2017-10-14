@@ -2,6 +2,7 @@ import game.*;
 import game.fieldItems.*;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import static org.junit.Assert.*;
@@ -27,10 +28,10 @@ public class GameTest {
         Game game = new Game(players, levels);
         game.currentLevel = game.levels.get(0);
 
-        game.nextStep(new Point(1, 0), player);
-        game.nextStep(new Point(1, 0), player);
+        game.nextStep();
+        game.nextStep();
 
         assertEquals(100, player.score);
-        assertTrue(player.isGameOver);
+        assertEquals(player.snake.size(), 0);
     }
 }

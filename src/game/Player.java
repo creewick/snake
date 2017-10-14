@@ -13,13 +13,17 @@ public class Player {
 
     public int score;
 
-    public boolean isGameOver;
+    public boolean isDead;
+
+    public void Kill(){
+        this.snake = new ArrayList<SnakePart>();
+        isDead = true;
+    }
 
     public Player(List<SnakePart> snake){
 
         this.snake = snake;
         this.score = 0;
-        this.isGameOver = false;
     }
 
     public SnakePart getHead() {

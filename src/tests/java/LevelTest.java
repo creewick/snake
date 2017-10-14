@@ -27,7 +27,7 @@ public class LevelTest{
         newLevel.field.add(firstWall);
         newLevel.field.add(secondWall);
 
-        newLevel.GenerateApple(1);
+        newLevel.generateApple(1);
 
         boolean flag = false;
 

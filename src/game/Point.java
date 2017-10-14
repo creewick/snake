@@ -25,7 +25,7 @@ public class Point {
     }
 
     public void loopingInTheField(int x, int y){
-        this.x = this.x % x;
-        this.y = this.y % y;
+        this.x = (this.x + x) % x;
+        this.y = (this.y + y) % y;
     }
 }
