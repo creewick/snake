@@ -1,7 +1,6 @@
-package game.GUI;
+package game.gui;
 
 import game.*;
-import game.Point;
 import game.fieldItems.*;
 
 import javax.swing.*;
@@ -9,10 +8,6 @@ import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.util.*;
-import java.util.List;
 
 public class Gui extends JPanel implements ActionListener{
 
@@ -23,7 +18,7 @@ public class Gui extends JPanel implements ActionListener{
     public int counter = fps*1;
 
     Timer mainTimer = new Timer(1000/fps, this);
-    Image grass = new ImageIcon("images/grass.jpg").getImage();
+    Image grass = new ImageIcon("images/grass.png").getImage();
     Image snakePart = new ImageIcon("images/snake_part.png").getImage();
     Image snakeHead = new ImageIcon("images/snake_head.png").getImage();
     Image redApple = new ImageIcon("images/red_apple.png").getImage();
@@ -37,34 +32,39 @@ public class Gui extends JPanel implements ActionListener{
 
     private JFrame frame;
 
-    private int cellWidth() {return frame.getWidth() / currentGame.currentLevel.size.x;}
-    private int cellHeight() {return frame.getHeight() / currentGame.currentLevel.size.y;}
+    private int cellWidth() {return frame.getWidth() / (currentGame.currentLevel.size.x+1);}
+    private int cellHeight() {return frame.getHeight() / (currentGame.currentLevel.size.y+1);}
 
     public void paint(Graphics g){
-        ((Graphics2D) g).drawImage(grass, 0, 0, null);
         if (counter > 0) {
-            ((Graphics2D) g).drawImage(poppy, 0, -50, 1000, 1000, null);
+            ((Graphics2D) g).drawImage(poppy, 0, 0, frame.getWidth(), frame.getHeight(), null);
         } else {
-            Image currentImage = redApple.getScaledInstance(cellWidth(), cellHeight(), Image.SCALE_DEFAULT);
+            for (int x = 0; x < currentGame.currentLevel.size.x; x++){
+                for (int y = 0; y < currentGame.currentLevel.size.y; y++){
+                    ((Graphics2D) g).drawImage(grass, x * cellWidth(), y * cellHeight(), cellWidth(), cellHeight(), null);
+                }
+            }
+            Image currentImage = redApple;
             for (fieldItem fieldItem : currentGame.currentLevel.field) {
                 if (fieldItem instanceof Apple)
-                    currentImage = redApple.getScaledInstance(cellWidth(), cellHeight(), Image.SCALE_DEFAULT);
+                    currentImage = redApple;
                 if (fieldItem instanceof Wall)
-                    currentImage = wall.getScaledInstance(cellWidth(), cellHeight(), Image.SCALE_DEFAULT);
+                    currentImage = wall;
                 ((Graphics2D) g).drawImage(currentImage, fieldItem.position.x * cellWidth(),
-                        fieldItem.position.y * cellHeight(), null);
+                        fieldItem.position.y * cellHeight(), cellWidth(), cellHeight(), null);
             }
 
-            currentImage = snakePart.getScaledInstance(cellWidth(), cellHeight(), Image.SCALE_DEFAULT);
+            currentImage = snakePart;
             for (Player player : currentGame.players) {
                 if (!player.isDead) {
                     for (SnakePart snakePart : player.snake) {
                         ((Graphics2D) g).drawImage(currentImage, snakePart.position.x * cellWidth(),
-                                snakePart.position.y * cellHeight(), null);
+                                snakePart.position.y * cellHeight(), cellWidth(), cellHeight(), null);
                     }
-                    ((Graphics2D) g).drawImage(snakeHead.getScaledInstance(cellWidth(), cellHeight(), Image.SCALE_DEFAULT),
+                    ((Graphics2D) g).drawImage(snakeHead,
                             player.getHead().position.x * cellWidth(),
                             player.getHead().position.y * cellHeight(),
+                            cellWidth(), cellHeight(),
                             null);
                 }
             }

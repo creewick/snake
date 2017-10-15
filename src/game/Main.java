@@ -1,6 +1,6 @@
 package game;
 
-import game.GUI.Gui;
+import game.gui.Gui;
 import game.fieldItems.Apple;
 import game.fieldItems.SnakePart;
 import game.fieldItems.Wall;
@@ -76,7 +76,7 @@ public class Main{
         singlePlayer.add(player);
         singlePlayer.add(player2);
 
-        Level oneLevel = new Level(50, 35);
+        Level oneLevel = new Level(20, 20);
         oneLevel.field = new HashSet<>();
         oneLevel.field.add(new Apple(10, 10));
         oneLevel.field.add(new Wall(20, 20));
