@@ -1,6 +1,7 @@
 package game.gui;
 
 import game.*;
+import game.Point;
 import game.fieldItems.*;
 
 import javax.swing.*;
@@ -8,6 +9,7 @@ import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class Gui extends JPanel implements ActionListener{
 
@@ -18,6 +20,7 @@ public class Gui extends JPanel implements ActionListener{
     public int counter = fps*1;
 
     Timer mainTimer = new Timer(1000/fps, this);
+    Sound bgm = new Sound(new File("music/bgm.wav"));
     Image backGround = new ImageIcon("images/bg.jpg").getImage();
     Image snakePartImage = new ImageIcon("images/snake_part.png").getImage();
     Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
@@ -98,8 +101,13 @@ public class Gui extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         counter--;
         if (counter < 0){
+            currentGame.directions.clear();
+            for (Point point : currentGame.tempDirections){
+                currentGame.directions.add(point);
+            }
             currentGame.nextStep();
         }
+        bgm.play(false);
         repaint();
     }
 }

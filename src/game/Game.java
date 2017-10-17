@@ -14,13 +14,17 @@ public class Game {
 
     public List<Point> directions;
 
+    public List<Point> tempDirections;
+
     public Game(List<Player> players, List<Level> levels) {
 
         this.players = players;
         this.levels = levels;
         this.directions = new ArrayList<>();
+        this.tempDirections = new ArrayList<>();
         for (int i = 0; i < players.size(); i++){
             directions.add(new Point(0, 1));
+            tempDirections.add(new Point(0, 1));
         }
     }
 

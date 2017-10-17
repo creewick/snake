@@ -8,6 +8,7 @@ import game.fieldItems.Wall;
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.*;
 
 public class Main{
@@ -46,8 +47,8 @@ public class Main{
                         Point newPoint = controls.get(i).get(e.getKeyCode());
                         Point oldPoint = newGui.currentGame.directions.get(i);
                         if (newPoint.x != -oldPoint.x && newPoint.y != -oldPoint.y) {
-                            newGui.currentGame.directions.remove(i);
-                            newGui.currentGame.directions.add(i, controls.get(i).get(e.getKeyCode()));
+                            newGui.currentGame.tempDirections.remove(i);
+                            newGui.currentGame.tempDirections.add(i, controls.get(i).get(e.getKeyCode()));
                         }
                     }
                 }
@@ -56,7 +57,6 @@ public class Main{
         newGui.currentGame = firstGame();
         frame.add(newGui);
         frame.setVisible(true);
-
     }
 
     public static Game firstGame(){
