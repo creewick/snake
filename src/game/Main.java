@@ -79,8 +79,9 @@ public class Main{
         Level oneLevel = new Level(20, 20);
         oneLevel.field = new HashSet<>();
         oneLevel.field.add(new Apple(10, 10));
-        oneLevel.field.add(new Wall(20, 20));
-        oneLevel.field.add(new Wall(21, 20));
+        oneLevel.field.add(new Wall(15, 15));
+        oneLevel.field.add(new Wall(15, 16));
+        oneLevel.field.add(new Wall(15, 17));
         List<Level> levels = new ArrayList<>();
         levels.add(oneLevel);
 

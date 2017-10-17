@@ -14,15 +14,18 @@ public class Gui extends JPanel implements ActionListener{
     public Game currentGame;
 
 
-    public final int fps = 10;
+    public final int fps = 5;
     public int counter = fps*1;
 
     Timer mainTimer = new Timer(1000/fps, this);
-    Image grass = new ImageIcon("images/grass.png").getImage();
-    Image snakePart = new ImageIcon("images/snake_part.png").getImage();
-    Image snakeHead = new ImageIcon("images/snake_head.png").getImage();
+    Image backGround = new ImageIcon("images/bg.jpg").getImage();
+    Image snakePartImage = new ImageIcon("images/snake_part.png").getImage();
+    Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
+    Image snakeHead2 = new ImageIcon("images/bober2.png").getImage();
+    Image snake2Head1 = new ImageIcon("images/sham1.png").getImage();
+    Image snake2Head2 = new ImageIcon("images/sham2.png").getImage();
     Image redApple = new ImageIcon("images/red_apple.png").getImage();
-    Image wall = new ImageIcon("images/wall.png").getImage();
+    Image wall = new ImageIcon("images/wall.jpg").getImage();
     Image poppy = new ImageIcon("images/poppy.jpg").getImage();
 
     public Gui(JFrame frame){
@@ -32,40 +35,60 @@ public class Gui extends JPanel implements ActionListener{
 
     private JFrame frame;
 
-    private int cellWidth() {return frame.getWidth() / (currentGame.currentLevel.size.x+1);}
-    private int cellHeight() {return frame.getHeight() / (currentGame.currentLevel.size.y+1);}
+    private int cellWidth() {return frame.getWidth() / (currentGame.currentLevel.size.x + 1);}
+    private int cellHeight() {return frame.getHeight() / (currentGame.currentLevel.size.y + 1);}
 
     public void paint(Graphics g){
+        g.clearRect(0, 0, frame.getWidth(), frame.getHeight());
         if (counter > 0) {
-            ((Graphics2D) g).drawImage(poppy, 0, 0, frame.getWidth(), frame.getHeight(), null);
+            g.drawImage(poppy, 100, 0, frame.getWidth() - 200, frame.getHeight()- 100, null);
         } else {
-            for (int x = 0; x < currentGame.currentLevel.size.x; x++){
-                for (int y = 0; y < currentGame.currentLevel.size.y; y++){
-                    ((Graphics2D) g).drawImage(grass, x * cellWidth(), y * cellHeight(), cellWidth(), cellHeight(), null);
-                }
-            }
-            Image currentImage = redApple;
+            g.drawImage(backGround, 0, 0, frame.getWidth(), frame.getHeight(), null);
             for (fieldItem fieldItem : currentGame.currentLevel.field) {
                 if (fieldItem instanceof Apple)
-                    currentImage = redApple;
+                    g.drawImage(redApple, fieldItem.position.x * cellWidth() - (cellWidth() / 2),
+                            fieldItem.position.y * cellHeight() - (cellHeight() / 2), cellWidth() * 2, cellHeight() * 2, null);
                 if (fieldItem instanceof Wall)
-                    currentImage = wall;
-                ((Graphics2D) g).drawImage(currentImage, fieldItem.position.x * cellWidth(),
-                        fieldItem.position.y * cellHeight(), cellWidth(), cellHeight(), null);
+                    g.drawImage(wall, fieldItem.position.x * cellWidth(),
+                            fieldItem.position.y * cellHeight(), cellWidth(), cellHeight(), null);
             }
 
-            currentImage = snakePart;
-            for (Player player : currentGame.players) {
+            for (int i=0; i < currentGame.players.size(); i++) {
+                Player player = currentGame.players.get(i);
                 if (!player.isDead) {
                     for (SnakePart snakePart : player.snake) {
-                        ((Graphics2D) g).drawImage(currentImage, snakePart.position.x * cellWidth(),
+                        g.drawImage(snakePartImage, snakePart.position.x * cellWidth(),
                                 snakePart.position.y * cellHeight(), cellWidth(), cellHeight(), null);
                     }
-                    ((Graphics2D) g).drawImage(snakeHead,
-                            player.getHead().position.x * cellWidth(),
-                            player.getHead().position.y * cellHeight(),
-                            cellWidth(), cellHeight(),
-                            null);
+                    if (counter % 2 == 0) {
+                        if (i == 0) {
+                            g.drawImage(snakeHead1,
+                                    player.getHead().position.x * cellWidth() - (cellWidth() / 2),
+                                    player.getHead().position.y * cellHeight() - (cellHeight() / 2),
+                                    cellWidth() * 2, cellHeight() * 2,
+                                    null);
+                        } else {
+                            g.drawImage(snake2Head1,
+                                    player.getHead().position.x * cellWidth() - (cellWidth() / 2),
+                                    player.getHead().position.y * cellHeight() - (cellHeight() / 2),
+                                    cellWidth() * 2, cellHeight() * 2,
+                                    null);
+                        }
+                    } else {
+                        if (i==0) {
+                            g.drawImage(snakeHead2,
+                                    player.getHead().position.x * cellWidth() - (cellWidth() / 2),
+                                    player.getHead().position.y * cellHeight() - (cellHeight() / 2),
+                                    cellWidth() * 2, cellHeight() * 2,
+                                    null);
+                        } else {
+                            g.drawImage(snake2Head2,
+                                    player.getHead().position.x * cellWidth() - (cellWidth() / 2),
+                                    player.getHead().position.y * cellHeight() - (cellHeight() / 2),
+                                    cellWidth() * 2, cellHeight() * 2,
+                                    null);
+                        }
+                    }
                 }
             }
         }
@@ -73,9 +96,8 @@ public class Gui extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (counter > 0) {
-            counter--;
-        } else {
+        counter--;
+        if (counter < 0){
             currentGame.nextStep();
         }
         repaint();
