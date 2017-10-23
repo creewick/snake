@@ -32,7 +32,7 @@ public class Game {
 
     public List<Player> players;
 
-    public List<SnakePart> snakePartToBoom(Player currentPlayer){
+    public List<SnakePart> getSnakePartsToCollisionWith(Player currentPlayer){
         List<SnakePart> snakeParts = new ArrayList<>();
         for (Player player : players){
             for (SnakePart snakePart : player.snake){
@@ -50,7 +50,7 @@ public class Game {
                 players.get(x).moveSnake(directions.get(x), currentLevel);
 
         for (Player player : players){
-            for (SnakePart snakePart : this.snakePartToBoom(player)) {
+            for (SnakePart snakePart : this.getSnakePartsToCollisionWith(player)) {
                 if (!player.isDead && snakePart.position.equals(player.getHead().position))
                     snakePart.onCollision(player, currentLevel);
             }

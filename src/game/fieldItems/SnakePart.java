@@ -1,6 +1,8 @@
 package game.fieldItems;
 
-import game.*;
+import game.Level;
+import game.Player;
+import game.Point;
 
 public class SnakePart extends fieldItem {
 

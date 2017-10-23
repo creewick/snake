@@ -1,9 +1,7 @@
 package game;
 
 import game.fieldItems.SnakePart;
-import game.fieldItems.fieldItem;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +14,7 @@ public class Player {
     public boolean isDead;
 
     public void Kill(){
-        this.snake = new ArrayList<SnakePart>();
+        this.snake = new ArrayList<>();
         isDead = true;
     }
 

@@ -32,6 +32,6 @@ public class AppleTest {
         greenApple.onCollision(player, level);
         assertEquals(100, player.score);
         assertEquals(snake.size(), 5);
-        assertEquals(level.field.size(), 0);
+        assertEquals(level.field.size(), 1);
     }
 }

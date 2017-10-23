@@ -5,11 +5,16 @@ import game.fieldItems.Apple;
 import game.fieldItems.SnakePart;
 import game.fieldItems.Wall;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 public class Main{
 
@@ -42,19 +47,19 @@ public class Main{
         Gui newGui = new Gui(frame);
         frame.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
-                for (int i = 0; i < newGui.currentGame.players.size(); i++){
+                for (int i = 0; i < newGui.getCurrentGame().players.size(); i++){
                     if (controls.get(i).containsKey(e.getKeyCode())){
                         Point newPoint = controls.get(i).get(e.getKeyCode());
-                        Point oldPoint = newGui.currentGame.directions.get(i);
+                        Point oldPoint = newGui.getCurrentGame().directions.get(i);
                         if (newPoint.x != -oldPoint.x && newPoint.y != -oldPoint.y) {
-                            newGui.currentGame.tempDirections.remove(i);
-                            newGui.currentGame.tempDirections.add(i, controls.get(i).get(e.getKeyCode()));
+                            newGui.getCurrentGame().tempDirections.remove(i);
+                            newGui.getCurrentGame().tempDirections.add(i, controls.get(i).get(e.getKeyCode()));
                         }
                     }
                 }
             }
         });
-        newGui.currentGame = firstGame();
+        newGui.setCurrentGame(firstGame());
         frame.add(newGui);
         frame.setVisible(true);
     }
