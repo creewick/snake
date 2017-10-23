@@ -35,7 +35,7 @@ public class Game {
     public List<SnakePart> getSnakePartsToCollisionWith(Player currentPlayer){
         List<SnakePart> snakeParts = new ArrayList<>();
         for (Player player : players){
-            for (SnakePart snakePart : player.snake){
+            for (SnakePart snakePart : player.getSnake()){
                 snakeParts.add(snakePart);
             }
         }

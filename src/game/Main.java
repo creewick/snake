@@ -18,29 +18,11 @@ import java.util.Map;
 
 public class Main{
 
-    static private List<Map<Integer, Point>> controls = new ArrayList();
-
-    static private void createControls(){
-        Map<Integer, Point> map1 = new HashMap();
-        map1.put(38, new Point(0, -1));
-        map1.put(37, new Point(-1, 0));
-        map1.put(39, new Point(1, 0));
-        map1.put(40, new Point(0, 1));
-        controls.add(map1);
-        Map<Integer, Point> map2 = new HashMap();
-        map2.put(87, new Point(0,-1));
-        map2.put(65, new Point(-1, 0));
-        map2.put(83, new Point(0, 1));
-        map2.put(68, new Point(1, 0));
-        controls.add(map2);
-    };
-
     public static final int cellSize = 20;
 
     public static void main(String args[]){
 
         Game firstGame = Main.firstGame();
-        createControls();
         JFrame frame = new JFrame("Awesome Snake");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(640, 480);
@@ -48,12 +30,12 @@ public class Main{
         frame.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 for (int i = 0; i < newGui.getCurrentGame().players.size(); i++){
-                    if (controls.get(i).containsKey(e.getKeyCode())){
-                        Point newPoint = controls.get(i).get(e.getKeyCode());
+                    if (newGui.getCurrentGame().players.get(i).getControls().containsKey(e.getKeyCode())){
+                        Point newPoint = newGui.getCurrentGame().players.get(i).getControls().get(e.getKeyCode()).asPoint();
                         Point oldPoint = newGui.getCurrentGame().directions.get(i);
                         if (newPoint.x != -oldPoint.x && newPoint.y != -oldPoint.y) {
                             newGui.getCurrentGame().tempDirections.remove(i);
-                            newGui.getCurrentGame().tempDirections.add(i, controls.get(i).get(e.getKeyCode()));
+                            newGui.getCurrentGame().tempDirections.add(i, newGui.getCurrentGame().players.get(i).getControls().get(e.getKeyCode()).asPoint());
                         }
                     }
                 }
@@ -70,12 +52,26 @@ public class Main{
         snake.add(new SnakePart(1, 0));
         snake.add(new SnakePart(2, 0));
 
-        Player player = new Player(snake);
+        HashMap<Integer, Direction> map1 = new HashMap();
+        map1.put(38, Direction.Up);
+        map1.put(37, Direction.Left);
+        map1.put(39, Direction.Right);
+        map1.put(40, Direction.Down);
+
+        Player player = new Player(snake, map1);
+
         List<SnakePart> snake2 = new ArrayList();
         snake2.add(new SnakePart(10, 0));
         snake2.add(new SnakePart(11, 0));
         snake2.add(new SnakePart(12, 0));
-        Player player2 = new Player(snake2);
+
+        HashMap<Integer, Direction> map2 = new HashMap();
+        map2.put(87, Direction.Up);
+        map2.put(65, Direction.Left);
+        map2.put(68, Direction.Right);
+        map2.put(83, Direction.Down);
+
+        Player player2 = new Player(snake2, map2);
 
         List<Player> singlePlayer = new ArrayList<>();
         singlePlayer.add(player);

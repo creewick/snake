@@ -49,8 +49,8 @@ public class PlayerTest {
                 new Point(2, 1),
                 new Point(3, 1),
                 new Point(3, 2));
-        for (int y = 0; y < player.snake.size(); y++) {
-            assertTrue(correctResult.get(y).equals(player.snake.get(y).position));
+        for (int y = 0; y < player.getSnake().size(); y++) {
+            assertTrue(correctResult.get(y).equals(player.getSnake().get(y).position));
         }
     }
 }

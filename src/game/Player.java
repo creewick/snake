@@ -3,11 +3,17 @@ package game;
 import game.fieldItems.SnakePart;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Player {
 
-    public List<SnakePart> snake;
+    private List<SnakePart> snake;
+    public List<SnakePart> getSnake() { return snake; }
+    public void increaseSnake() { snake.add(getHead()); }
+
+    private HashMap<Integer, Direction> controls;
+    public HashMap<Integer, Direction> getControls() {return controls; }
 
     public int score;
 
@@ -18,10 +24,16 @@ public class Player {
         isDead = true;
     }
 
-    public Player(List<SnakePart> snake){
+    public Player(List<SnakePart> snake, HashMap<Integer, Direction> controls){
+        this.snake = snake;
+        this.controls = controls;
+        this.score = 0;
+    }
 
+    public Player(List<SnakePart> snake){
         this.snake = snake;
         this.score = 0;
+        this.controls = new HashMap<>();
     }
 
     public SnakePart getHead() {

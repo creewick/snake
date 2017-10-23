@@ -49,7 +49,7 @@ public class Gui extends JPanel implements ActionListener{
     }
 
     private void animateHead(int counter, Graphics g, Image head1, Image head2, Player player){
-        Image currentImage = counter == 0
+        Image currentImage = counter % 2 == 0
                 ? head2
                 : head1;
         g.drawImage(currentImage,
@@ -87,16 +87,16 @@ public class Gui extends JPanel implements ActionListener{
         for (int i=0; i < currentGame.players.size(); i++) {
             Player player = currentGame.players.get(i);
             if (!player.isDead) {
-                for (SnakePart snakePart : player.snake) {
+                for (SnakePart snakePart : player.getSnake()) {
                     g.drawImage(snakePartImage,
                             snakePart.position.x * cellWidth(),
                             snakePart.position.y * cellHeight(),
                             cellWidth(), cellHeight(), null);
                 }
                 if (i == 0) {
-                    animateHead(counter % 2, g, snakeHead1, snakeHead2, player);
+                    animateHead(counter, g, snakeHead1, snakeHead2, player);
                 } else {
-                    animateHead(counter % 2, g, snake2Head1, snake2Head2, player);
+                    animateHead(counter, g, snake2Head1, snake2Head2, player);
                 }
             }
         }
@@ -116,6 +116,7 @@ public class Gui extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         counter--;
+        //рисовать один раз
         if (counter < 0){
             currentGame.directions.clear();
             for (Point point : currentGame.tempDirections){

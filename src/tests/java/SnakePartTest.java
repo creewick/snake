@@ -17,6 +17,6 @@ public class SnakePartTest {
         Player player = new Player(new ArrayList<SnakePart>());
         SnakePart snake = new SnakePart(0, 0);
         snake.onCollision(player, new Level(1, 1));
-        assertEquals(player.snake.size(), 0);
+        assertEquals(player.getSnake().size(), 0);
     }
 }
