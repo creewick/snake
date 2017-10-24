@@ -30,4 +30,11 @@ public class PointTest {
         assertEquals(thirdPoint.hashCode(), secondPoint.hashCode());
     }
 
+    @Test
+    public void loopingInTheField(){
+        Point point = new Point(10, 10);
+        point.loopingInTheField(10, 10);
+        assertTrue(point.equals(new Point(0, 0)));
+    }
+
 }
