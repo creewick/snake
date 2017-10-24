@@ -16,21 +16,21 @@ public class Game {
 
     public List<Point> tempDirections;
 
-    public Game(List<Player> players, List<Level> levels) {
+    public Game(Player[] players, Level[] levels) {
 
         this.players = players;
         this.levels = levels;
         this.directions = new ArrayList<>();
         this.tempDirections = new ArrayList<>();
-        for (int i = 0; i < players.size(); i++){
+        for (int i = 0; i < players.length; i++){
             directions.add(new Point(0, 1));
             tempDirections.add(new Point(0, 1));
         }
     }
 
-    public List<Level> levels;
+    public Level[] levels;
 
-    public List<Player> players;
+    public Player[] players;
 
     public List<SnakePart> getSnakePartsToCollisionWith(Player currentPlayer){
         List<SnakePart> snakeParts = new ArrayList<>();
@@ -46,8 +46,8 @@ public class Game {
 
     public void nextStep() {
         for (int x = 0; x < directions.size(); x++)
-            if (!players.get(x).isDead)
-                players.get(x).moveSnake(directions.get(x), currentLevel);
+            if (!players[x].isDead)
+                players[x].moveSnake(directions.get(x), currentLevel);
 
         for (Player player : players){
             for (SnakePart snakePart : this.getSnakePartsToCollisionWith(player)) {

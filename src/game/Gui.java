@@ -1,7 +1,6 @@
-package game.gui;
+package game;
 
 import game.fieldItems.*;
-import game.*;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -19,7 +18,6 @@ import java.io.File;
 public class Gui extends JPanel implements ActionListener{
 
     private Game currentGame;
-    public Game getCurrentGame() { return currentGame; }
     public void setCurrentGame(Game game) { currentGame = game; }
 
     private JFrame frame;
@@ -84,8 +82,8 @@ public class Gui extends JPanel implements ActionListener{
     }
 
     private void drawSnakes(Graphics g){
-        for (int i=0; i < currentGame.players.size(); i++) {
-            Player player = currentGame.players.get(i);
+        for (int i=0; i < currentGame.players.length; i++) {
+            Player player = currentGame.players[i];
             if (!player.isDead) {
                 for (SnakePart snakePart : player.getSnake()) {
                     g.drawImage(snakePartImage,

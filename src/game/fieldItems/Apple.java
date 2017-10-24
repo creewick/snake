@@ -1,9 +1,11 @@
 package game.fieldItems;
 
+import game.Image;
 import game.Level;
 import game.Player;
 import game.Point;
 
+@Image(path="images/red_apple.png")
 public class Apple extends fieldItem {
 
     public Apple(int x, int y){
