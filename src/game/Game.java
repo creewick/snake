@@ -11,26 +11,13 @@ import java.util.List;
 public class Game {
 
     public Level currentLevel;
-
-    public List<Point> directions;
-
-    public List<Point> tempDirections;
+    public Level[] levels;
+    public Player[] players;
 
     public Game(Player[] players, Level[] levels) {
-
         this.players = players;
         this.levels = levels;
-        this.directions = new ArrayList<>();
-        this.tempDirections = new ArrayList<>();
-        for (int i = 0; i < players.length; i++){
-            directions.add(new Point(0, 1));
-            tempDirections.add(new Point(0, 1));
-        }
     }
-
-    public Level[] levels;
-
-    public Player[] players;
 
     public List<SnakePart> getSnakePartsToCollisionWith(Player currentPlayer){
         List<SnakePart> snakeParts = new ArrayList<>();
@@ -45,9 +32,11 @@ public class Game {
     }
 
     public void nextStep() {
-        for (int x = 0; x < directions.size(); x++)
-            if (!players[x].isDead)
-                players[x].moveSnake(directions.get(x), currentLevel);
+        for (int x = 0; x < players.length; x++)
+            if (!players[x].isDead) {
+                players[x].moveSnake(players[x].getDirection(), currentLevel);
+                players[x].unlockKey();
+        }
 
         for (Player player : players){
             for (SnakePart snakePart : this.getSnakePartsToCollisionWith(player)) {

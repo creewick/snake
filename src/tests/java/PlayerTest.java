@@ -39,10 +39,10 @@ public class PlayerTest {
         level.field.add(new SnakePart(0, 2));
         level.field.add(new SnakePart(1, 2));
 
-        player.moveSnake(new Point(0, -1), level);
-        player.moveSnake(new Point(1, 0), level);
-        player.moveSnake(new Point(1, 0), level);
-        player.moveSnake(new Point(0, 1), level);
+        //player.moveSnake(new Point(0, -1), level);
+        //player.moveSnake(new Point(1, 0), level);
+        //player.moveSnake(new Point(1, 0), level);
+        //player.moveSnake(new Point(0, 1), level);
 
         List<Point> correctResult = Arrays.asList(
                 new Point(1, 1),

@@ -29,16 +29,12 @@ public class Gui extends JPanel implements ActionListener{
 
     private Timer mainTimer = new Timer(1000/fps, this);
 
-    //Убрать после изучения аттрибутов
     Sound bgm = new Sound(new File("music/bgm.wav"));
     Image background = new ImageIcon("images/bg.jpg").getImage();
-    Image snakePartImage = new ImageIcon("images/snake_part.png").getImage();
     Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
     Image snakeHead2 = new ImageIcon("images/bober2.png").getImage();
     Image snake2Head1 = new ImageIcon("images/sham1.png").getImage();
     Image snake2Head2 = new ImageIcon("images/sham2.png").getImage();
-    Image redApple = new ImageIcon("images/red_apple.png").getImage();
-    Image wall = new ImageIcon("images/wall.jpg").getImage();
     Image poppy = new ImageIcon("images/poppy.jpg").getImage();
 
     public Gui(JFrame frame){
@@ -67,18 +63,10 @@ public class Gui extends JPanel implements ActionListener{
 
     private void drawObjects(Graphics g){
         for (fieldItem fieldItem : currentGame.currentLevel.field) {
-            g.drawImage(fieldItem.getClass().getAnnotation(game.Image).path().getImage())
-            //Убрать после изучения атрибутов
-            if (fieldItem instanceof Apple)
-                g.drawImage(redApple,
-                        fieldItem.position.x * cellWidth() - (cellWidth() / 2),
-                        fieldItem.position.y * cellHeight() - (cellHeight() / 2),
-                        cellWidth() * 2, cellHeight() * 2, null);
-            if (fieldItem instanceof Wall)
-                g.drawImage(wall,
-                        fieldItem.position.x * cellWidth(),
-                        fieldItem.position.y * cellHeight(),
-                        cellWidth(), cellHeight(), null);
+            g.drawImage(new ImageIcon(fieldItem.getClass().getAnnotation(game.Image.class).path()).getImage(),
+                    fieldItem.position.x * cellWidth(),
+                    fieldItem.position.y * cellHeight(),
+                    cellWidth(), cellHeight(), null);
         }
     }
 
@@ -87,7 +75,7 @@ public class Gui extends JPanel implements ActionListener{
             Player player = currentGame.players[i];
             if (!player.isDead) {
                 for (SnakePart snakePart : player.getSnake()) {
-                    g.drawImage(snakePartImage,
+                    g.drawImage(new ImageIcon(snakePart.getClass().getAnnotation(game.Image.class).path()).getImage(),
                             snakePart.position.x * cellWidth(),
                             snakePart.position.y * cellHeight(),
                             cellWidth(), cellHeight(), null);
@@ -117,10 +105,6 @@ public class Gui extends JPanel implements ActionListener{
         counter--;
         //рисовать один раз
         if (counter < 0){
-            currentGame.directions.clear();
-            for (Point point : currentGame.tempDirections){
-                currentGame.directions.add(point);
-            }
             currentGame.nextStep();
         }
         bgm.play(false);

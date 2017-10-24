@@ -28,12 +28,12 @@ public class Main{
         frame.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 for (int i = 0; i < ourGame.players.length; i++){
-                    if (ourGame.players[i].getControls().containsKey(e.getKeyCode())){
-                        Point newPoint = ourGame.players[i].getControls().get(e.getKeyCode()).asPoint();
-                        Point oldPoint = ourGame.directions.get(i);
-                        if (newPoint.x != -oldPoint.x && newPoint.y != -oldPoint.y) {
-                            ourGame.tempDirections.remove(i);
-                            ourGame.tempDirections.add(i, ourGame.players[i].getControls().get(e.getKeyCode()).asPoint());
+                    if (!ourGame.players[i].isKeyLocked() && ourGame.players[i].getControls().containsKey(e.getKeyCode())){
+                        Direction newDirection = ourGame.players[i].getControls().get(e.getKeyCode());
+                        Direction oldDirection = ourGame.players[i].getDirection();
+                        if (newDirection == oldDirection.getLeft() || newDirection == oldDirection.getRight()) {
+                            ourGame.players[i].setDirection(newDirection);
+                            ourGame.players[i].lockKey();
                         }
                     }
                 }
@@ -55,7 +55,7 @@ public class Main{
         controls.put(39, Direction.Right);
         controls.put(40, Direction.Down);
 
-        return new Player(snake, controls);
+        return new Player(snake, controls, Direction.Down);
     }
 
     public static Player testPlayer2(){
@@ -70,7 +70,7 @@ public class Main{
         controls.put(68, Direction.Right);
         controls.put(83, Direction.Down);
 
-        return new Player(snake, controls);
+        return new Player(snake, controls, Direction.Down);
     }
 
     public static Level testLevel1(){
