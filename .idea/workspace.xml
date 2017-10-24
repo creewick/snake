@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c9c05b8-d74e-43e7-8e90-20fe79f12d09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/Gui.class" afterPath="$PROJECT_DIR$/out/production/snake/game/Gui.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Apple.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Apple.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/SnakePart.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/SnakePart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Wall.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Wall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Gui.java" afterPath="$PROJECT_DIR$/src/game/Gui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Image.java" afterPath="$PROJECT_DIR$/src/game/Image.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/java/PointTest.java" afterPath="$PROJECT_DIR$/src/tests/java/PointTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,12 +14,102 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Gui.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Gui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
+            <state relative-caret-position="105">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Direction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectionTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/java/DirectionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sound.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Sound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/java/PointTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snake.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/snake.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/Image.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -35,8 +120,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -73,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/tests/GameTest.java" />
         <option value="$PROJECT_DIR$/src/tests/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/tests/SnakePartTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/java/PointTest.java" />
         <option value="$PROJECT_DIR$/src/game/fieldItems/fieldItem.java" />
         <option value="$PROJECT_DIR$/src/game/GUI/fieldItem.java" />
         <option value="$PROJECT_DIR$/src/game/GUI/Field.java" />
@@ -98,6 +182,9 @@
         <option value="$PROJECT_DIR$/src/game/Main.java" />
         <option value="$PROJECT_DIR$/src/game/Image.java" />
         <option value="$PROJECT_DIR$/src/game/Gui.java" />
+        <option value="$PROJECT_DIR$/src/tests/java/PointTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/java/game/DirectionTest.java" />
+        <option value="$PROJECT_DIR$/src/tests/java/DirectionTest.java" />
       </list>
     </option>
   </component>
@@ -121,27 +208,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="snake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snake" type="462c0819:PsiDirectoryNode" />
+              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="snake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snake" type="462c0819:PsiDirectoryNode" />
+              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="snake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snake" type="462c0819:PsiDirectoryNode" />
+              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snake" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -163,8 +263,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="game.fieldItems" />
       <recent name="game" />
+      <recent name="game.fieldItems" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -189,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DirectionTest.asPoint">
     <configuration name="All in snake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="snake" />
@@ -210,14 +310,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="GameTest.nextStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="DirectionTest.asPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="snake" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="nextStep" />
+      <option name="MAIN_CLASS_NAME" value="game.DirectionTest" />
+      <option name="METHOD_NAME" value="asPoint" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -230,34 +335,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DirectionTest.getLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="game.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="snake" />
-      <envs />
-    </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="snake" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="game.DirectionTest" />
+      <option name="METHOD_NAME" value="getLeft" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -269,14 +360,39 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="PlayerTest.moveSnake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DirectionTest.getRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="snake" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="game.DirectionTest" />
+      <option name="METHOD_NAME" value="getRight" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PointTest.loopingInTheField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="snake" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="METHOD_NAME" value="moveSnake" />
+      <option name="MAIN_CLASS_NAME" value="PointTest" />
+      <option name="METHOD_NAME" value="loopingInTheField" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -372,18 +488,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in snake" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GameTest.nextStep" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PlayerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PlayerTest.moveSnake" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PointTest.loopingInTheField" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DirectionTest.getLeft" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DirectionTest.getRight" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DirectionTest.asPoint" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in snake" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest.nextStep" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PlayerTest.moveSnake" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PlayerTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DirectionTest.asPoint" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DirectionTest.getRight" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DirectionTest.getLeft" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in snake" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PointTest.loopingInTheField" />
       </list>
     </recent_temporary>
   </component>
@@ -401,55 +517,55 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_snake - 2017.10.13 at 23h 03m 29s.xml">
+    <history-entry file="All_in_snake - 2017.10.24 at 13h 18m 14s.xml">
       <configuration name="All in snake" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snake - 2017.10.18 at 13h 32m 40s.xml">
-      <configuration name="All in snake" configurationId="JUnit" />
+    <history-entry file="DirectionTest_asPoint - 2017.10.24 at 13h 35m 18s.xml">
+      <configuration name="DirectionTest.asPoint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snake - 2017.10.18 at 13h 49m 33s.xml">
-      <configuration name="All in snake" configurationId="JUnit" />
+    <history-entry file="DirectionTest_asPoint - 2017.10.24 at 13h 35m 42s.xml">
+      <configuration name="DirectionTest.asPoint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snake - 2017.10.18 at 13h 50m 02s.xml">
-      <configuration name="All in snake" configurationId="JUnit" />
+    <history-entry file="DirectionTest_asPoint - 2017.10.24 at 13h 37m 46s.xml">
+      <configuration name="DirectionTest.asPoint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snake - 2017.10.18 at 13h 50m 20s.xml">
-      <configuration name="All in snake" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getLeft - 2017.10.24 at 13h 27m 09s.xml">
+      <configuration name="DirectionTest.getLeft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest_nextStep - 2017.10.13 at 22h 39m 18s.xml">
-      <configuration name="GameTest.nextStep" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getLeft - 2017.10.24 at 13h 27m 58s.xml">
+      <configuration name="DirectionTest.getLeft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest_nextStep - 2017.10.13 at 22h 59m 01s.xml">
-      <configuration name="GameTest.nextStep" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getLeft - 2017.10.24 at 13h 30m 53s.xml">
+      <configuration name="DirectionTest.getLeft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest_nextStep - 2017.10.13 at 23h 00m 15s.xml">
-      <configuration name="GameTest.nextStep" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getLeft - 2017.10.24 at 13h 31m 20s.xml">
+      <configuration name="DirectionTest.getLeft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest_nextStep - 2017.10.13 at 23h 03m 03s.xml">
-      <configuration name="GameTest.nextStep" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getRight - 2017.10.24 at 13h 32m 08s.xml">
+      <configuration name="DirectionTest.getRight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameTest_nextStep - 2017.10.13 at 23h 03m 18s.xml">
-      <configuration name="GameTest.nextStep" configurationId="JUnit" />
+    <history-entry file="DirectionTest_getRight - 2017.10.24 at 13h 32m 45s.xml">
+      <configuration name="DirectionTest.getRight" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-8" width="1318" height="784" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32671082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21412803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13671274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -502,38 +618,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/game/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <marker date="1508783384524" expanded="true" signature="22:126" ph="..." />
-            <marker date="1508783384524" expanded="true" signature="224:241" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="274:299" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="404:423" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="498:568" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="648:741" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="783:883" ph="{...}" />
-            <marker date="1508783384524" expanded="false" signature="915:926" ph=" { " />
-            <marker date="1508783384524" expanded="false" signature="961:967" ph=" }" />
-            <marker date="1508783384524" expanded="true" signature="1025:1280" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <marker date="1507984213228" expanded="true" signature="67:114" ph="{...}" />
-            <marker date="1507984213228" expanded="true" signature="176:187" ph=" { " />
-            <marker date="1507984213228" expanded="true" signature="233:239" ph=" }" />
-            <marker date="1507984213228" expanded="true" signature="285:367" ph="{...}" />
-            <marker date="1507984213228" expanded="false" signature="402:413" ph=" { " />
-            <marker date="1507984213228" expanded="false" signature="456:462" ph=" }" />
-            <marker date="1507984213228" expanded="true" signature="511:588" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -542,12 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1508828029833" expanded="true" signature="22:160" ph="..." />
-            <marker date="1508828029833" expanded="true" signature="342:660" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="797:1143" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="1172:2039" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -563,12 +647,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1508828029833" expanded="true" signature="22:160" ph="..." />
-            <marker date="1508828029833" expanded="true" signature="342:660" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="797:1143" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="1172:2039" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -646,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/java/PointTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -720,9 +792,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <marker date="1507984213332" expanded="false" signature="33:83" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,11 +800,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="52" column="57" lean-forward="false" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
-          <folding>
-            <marker date="1508783127432" expanded="false" signature="7:286" ph="..." />
-            <marker date="1508783127432" expanded="true" signature="349:637" ph="{...}" />
-            <marker date="1508783127432" expanded="true" signature="677:1756" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,10 +808,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <marker date="1508783151503" expanded="false" signature="7:242" ph="..." />
-            <marker date="1508783151503" expanded="true" signature="313:535" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -753,78 +816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding>
-            <marker date="1508783151556" expanded="false" signature="7:285" ph="..." />
-            <marker date="1508783151556" expanded="true" signature="371:1042" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-          <folding>
-            <marker date="1508783384524" expanded="true" signature="22:126" ph="..." />
-            <marker date="1508783384524" expanded="true" signature="224:241" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="274:299" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="404:423" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="498:568" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="648:741" ph="{...}" />
-            <marker date="1508783384524" expanded="true" signature="783:883" ph="{...}" />
-            <marker date="1508783384524" expanded="false" signature="915:926" ph=" { " />
-            <marker date="1508783384524" expanded="false" signature="961:967" ph=" }" />
-            <marker date="1508783384524" expanded="true" signature="1025:1280" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1507984213228" expanded="true" signature="67:114" ph="{...}" />
-            <marker date="1507984213228" expanded="true" signature="176:187" ph=" { " />
-            <marker date="1507984213228" expanded="true" signature="233:239" ph=" }" />
-            <marker date="1507984213228" expanded="true" signature="285:367" ph="{...}" />
-            <marker date="1507984213228" expanded="false" signature="402:413" ph=" { " />
-            <marker date="1507984213228" expanded="false" signature="456:462" ph=" }" />
-            <marker date="1507984213228" expanded="true" signature="511:588" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <marker date="1508228980411" expanded="true" signature="22:413" ph="..." />
-            <marker date="1508228980411" expanded="true" signature="608:1110" ph="{...}" />
-            <marker date="1508228980411" expanded="false" signature="1210:1221" ph=" { " />
-            <marker date="1508228980411" expanded="false" signature="1237:1243" ph=" }" />
-            <marker date="1508228980411" expanded="false" signature="1319:1330" ph=" { " />
-            <marker date="1508228980411" expanded="false" signature="1345:1351" ph=" }" />
-            <marker date="1508228980411" expanded="true" signature="1561:1920" ph="{...}" />
-            <marker date="1508228980411" expanded="false" signature="1980:1991" ph=" { " />
-            <marker date="1508228980411" expanded="false" signature="2002:2008" ph=" }" />
-            <marker date="1508228980411" expanded="true" signature="2069:2134" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="2279:2461" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="2545:2708" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="2779:2969" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="3053:3164" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="3217:3469" ph="{...}" />
-            <marker date="1508228980411" expanded="true" signature="3260:3463" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,11 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1508828430620" expanded="false" signature="7:151" ph="..." />
-            <marker date="1508828430620" expanded="true" signature="231:988" ph="{...}" />
-            <marker date="1508828430620" expanded="true" signature="745:982" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -844,13 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1508829526349" expanded="false" signature="33:102" ph="..." />
-            <marker date="1508829526349" expanded="false" signature="219:229" ph=" { " />
-            <marker date="1508829526349" expanded="false" signature="261:267" ph=" }" />
-            <marker date="1508829526349" expanded="false" signature="324:335" ph=" { " />
-            <marker date="1508829526349" expanded="false" signature="349:355" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -858,12 +840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <marker date="1508829404466" expanded="false" signature="33:102" ph="..." />
-            <marker date="1508829404466" expanded="false" signature="210:220" ph=" { " />
-            <marker date="1508829404466" expanded="false" signature="252:258" ph=" }" />
-            <marker date="1508829404466" expanded="false" signature="316:449" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,86 +848,108 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <marker date="1508829522041" expanded="false" signature="33:102" ph="..." />
-            <marker date="1508829522041" expanded="false" signature="203:213" ph=" { " />
-            <marker date="1508829522041" expanded="false" signature="245:251" ph=" }" />
-            <marker date="1508829522041" expanded="false" signature="308:319" ph=" { " />
-            <marker date="1508829522041" expanded="false" signature="333:339" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Direction.java">
+    <entry file="file://$PROJECT_DIR$/snake.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <marker date="1508740182748" expanded="true" signature="96:216" ph="{...}" />
-            <marker date="1508740182748" expanded="true" signature="250:370" ph="{...}" />
-            <marker date="1508740182748" expanded="true" signature="398:725" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="29" column="65" lean-forward="false" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-          <folding>
-            <marker date="1508830150186" expanded="false" signature="15:306" ph="..." />
-            <marker date="1508830150186" expanded="false" signature="22:306" ph="..." />
-            <marker date="1508830150186" expanded="true" signature="414:1525" ph="{...}" />
-            <marker date="1508830150186" expanded="false" signature="704:771" ph="(KeyAdapter) keyPressed(e) → {" />
-            <marker date="1508830150186" expanded="false" signature="1443:1458" ph="}" />
-            <marker date="1508830150186" expanded="false" signature="1565:2016" ph="{...}" />
-            <marker date="1508830150186" expanded="false" signature="2056:2510" ph="{...}" />
-            <marker date="1508830150186" expanded="false" signature="2548:2830" ph="{...}" />
-            <marker date="1508830150186" expanded="false" signature="2865:3038" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <marker date="1508733854116" expanded="true" signature="22:166" ph="..." />
-            <marker date="1508733854116" expanded="false" signature="282:292" ph=" { " />
-            <marker date="1508733854116" expanded="false" signature="320:326" ph=" }" />
-            <marker date="1508733854116" expanded="true" signature="360:1148" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1508828029833" expanded="true" signature="22:160" ph="..." />
-            <marker date="1508828029833" expanded="true" signature="342:660" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="797:1143" ph="{...}" />
-            <marker date="1508828029833" expanded="true" signature="1172:2039" ph="{...}" />
-          </folding>
+        <state relative-caret-position="336">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Image.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="84">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <marker date="1508830860204" expanded="true" signature="22:98" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
+        <state relative-caret-position="105">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/java/PointTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/java/DirectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
