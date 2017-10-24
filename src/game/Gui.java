@@ -67,6 +67,7 @@ public class Gui extends JPanel implements ActionListener{
 
     private void drawObjects(Graphics g){
         for (fieldItem fieldItem : currentGame.currentLevel.field) {
+            g.drawImage(fieldItem.getClass().getAnnotation(game.Image).path().getImage())
             //Убрать после изучения атрибутов
             if (fieldItem instanceof Apple)
                 g.drawImage(redApple,

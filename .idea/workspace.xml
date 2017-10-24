@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c9c05b8-d74e-43e7-8e90-20fe79f12d09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/Gui.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/Image.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/snake/game/GUI/Gui.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/game/GUI/Gui.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/Game.class" afterPath="$PROJECT_DIR$/out/production/snake/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/Main$1.class" afterPath="$PROJECT_DIR$/out/production/snake/game/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/Main.class" afterPath="$PROJECT_DIR$/out/production/snake/game/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/snake/GameTest.class" afterPath="$PROJECT_DIR$/out/test/snake/GameTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/Gui.class" afterPath="$PROJECT_DIR$/out/production/snake/game/Gui.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Apple.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Apple.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/SnakePart.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/SnakePart.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Wall.class" afterPath="$PROJECT_DIR$/out/production/snake/game/fieldItems/Wall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Game.java" afterPath="$PROJECT_DIR$/src/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Main.java" afterPath="$PROJECT_DIR$/src/game/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/fieldItems/Apple.java" afterPath="$PROJECT_DIR$/src/game/fieldItems/Apple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/fieldItems/SnakePart.java" afterPath="$PROJECT_DIR$/src/game/fieldItems/SnakePart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/fieldItems/Wall.java" afterPath="$PROJECT_DIR$/src/game/fieldItems/Wall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/java/GameTest.java" afterPath="$PROJECT_DIR$/src/tests/java/GameTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Gui.java" afterPath="$PROJECT_DIR$/src/game/Gui.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Image.java" afterPath="$PROJECT_DIR$/src/game/Image.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +23,8 @@
       <file leaf-file-name="Gui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -919,14 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Level.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -953,10 +937,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding>
+            <marker date="1508830860204" expanded="true" signature="22:98" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="69" column="89" lean-forward="true" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
           <folding />
         </state>
       </provider>
