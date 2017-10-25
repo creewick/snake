@@ -1,8 +1,9 @@
-package game.fieldItems;
-
 import game.Level;
 import game.Player;
+import game.fieldItems.SnakePart;
+import game.fieldItems.fieldItem;
 import org.junit.Test;
+import game.fieldItems.Wall;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -17,11 +18,12 @@ public class WallTest {
         List<SnakePart> snake = new ArrayList<>();
         snake.add(new SnakePart(0, 0));
         Player player = new Player(snake);
-        Level level = new Level(3, 3);
-        level.field = new HashSet<fieldItem>();
-        level.field.add(wall);
+
+        HashSet<fieldItem> field = new HashSet<>();
+        field.add(wall);
+        Level level = new Level(3, 3, field);
         wall.onCollision(player, level);
-        assertEquals(true, player.isDead);
+        assertEquals(true, player.isDead());
     }
 
 }

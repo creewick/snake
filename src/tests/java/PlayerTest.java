@@ -1,3 +1,4 @@
+import game.Direction;
 import game.Level;
 import game.Player;
 import game.Point;
@@ -13,6 +14,38 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class PlayerTest {
+
+    @Test
+    public void getSnakeTest(){
+        List<SnakePart> snake = Arrays.asList(
+                new SnakePart(1, 2));
+        Player player = new Player(snake);
+        List<SnakePart> res = player.getSnake();
+        for (int x = 0; x < res.size(); x++){
+            assertTrue(res.get(x).position.equals(snake.get(x).position));
+        }
+    }
+
+    @Test
+    public void increaseSnakeTest(){
+        List<SnakePart> snake = new ArrayList<>();
+        snake.add(new SnakePart(1, 2));
+        Player player = new Player(snake);
+        player.increaseSnake();
+        for (SnakePart snakePart : player.getSnake()){
+            assertTrue(snakePart.position.equals(new Point(1, 2)));
+        }
+    }
+
+    @Test
+    public void killTest(){
+        List<SnakePart> snake = new ArrayList<>();
+        snake.add(new SnakePart(0, 0));
+        Player player = new Player(snake);
+        player.Kill();
+        assertTrue(player.isDead());
+    }
+
     @Test
     public void getHead(){
         List<SnakePart> snake = Arrays.asList(
@@ -32,17 +65,16 @@ public class PlayerTest {
         snake.add(new SnakePart(1, 2));
         Player player = new Player(snake);
 
-        Level level = new Level(7, 7);
-        level.field = new HashSet<fieldItem>();
-        level.field.add(new SnakePart(0, 0));
-        level.field.add(new SnakePart(0, 1));
-        level.field.add(new SnakePart(0, 2));
-        level.field.add(new SnakePart(1, 2));
+        Level level = new Level(7, 7, new HashSet<fieldItem>());
 
-        //player.moveSnake(new Point(0, -1), level);
-        //player.moveSnake(new Point(1, 0), level);
-        //player.moveSnake(new Point(1, 0), level);
-        //player.moveSnake(new Point(0, 1), level);
+        player.setDirection(Direction.Up);
+        player.moveSnake(level);
+        player.setDirection(Direction.Right);
+        player.moveSnake(level);
+        player.setDirection(Direction.Right);
+        player.moveSnake(level);
+        player.setDirection(Direction.Down);
+        player.moveSnake(level);
 
         List<Point> correctResult = Arrays.asList(
                 new Point(1, 1),

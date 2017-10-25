@@ -13,9 +13,9 @@ public class Apple extends fieldItem {
     }
 
     public void onCollision(Player player, Level level) {
-        player.score += 100;
+        player.addScore(100);
         player.increaseSnake();
         level.generateApple();
-        level.field.remove(this);
+        level.getField().remove(this);
     }
 }

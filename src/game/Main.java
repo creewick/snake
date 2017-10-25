@@ -3,6 +3,7 @@ package game;
 import game.fieldItems.Apple;
 import game.fieldItems.SnakePart;
 import game.fieldItems.Wall;
+import game.fieldItems.fieldItem;
 
 import javax.swing.JFrame;
 
@@ -18,29 +19,54 @@ public class Main{
 
     public static final int cellSize = 20;
 
+    private static HashMap<Player, Boolean> locks;
+    public static HashMap<Player, Boolean> getLocks(){
+        return locks;
+    }
+
     public static void main(String args[]){
         JFrame frame = new JFrame("Awesome Snake");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(640, 480);
         Gui ourGui = new Gui(frame);
         Game ourGame = testGame();
+        locks = getLocks(ourGame);
         ourGui.setCurrentGame(ourGame);
         frame.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
-                for (int i = 0; i < ourGame.players.length; i++){
-                    if (!ourGame.players[i].isKeyLocked() && ourGame.players[i].getControls().containsKey(e.getKeyCode())){
-                        Direction newDirection = ourGame.players[i].getControls().get(e.getKeyCode());
-                        Direction oldDirection = ourGame.players[i].getDirection();
+                for (Player player : ourGame.getPlayers()) {
+                    if (!locks.get(player) && player.getControls().containsKey(e.getKeyCode())) {
+                        Direction newDirection = player.getControls().get(e.getKeyCode());
+                        Direction oldDirection = player.getDirection();
                         if (newDirection == oldDirection.getLeft() || newDirection == oldDirection.getRight()) {
-                            ourGame.players[i].setDirection(newDirection);
-                            ourGame.players[i].lockKey();
+                            player.setDirection(newDirection);
+//                            locks.get(player) = true;
                         }
                     }
                 }
             }
         });
+//                for (int i = 0; i < ourGame.getPlayers().length; i++){
+//                    if (!ourGame.getPlayers()[i].isKeyLocked() && ourGame.getPlayers()[i].getControls().containsKey(e.getKeyCode())){
+//                        Direction newDirection = ourGame.getPlayers()[i].getControls().get(e.getKeyCode());
+//                        Direction oldDirection = ourGame.getPlayers()[i].getDirection();
+//                        if (newDirection == oldDirection.getLeft() || newDirection == oldDirection.getRight()) {
+//                            ourGame.getPlayers()[i].setDirection(newDirection);
+//                            ourGame.getPlayers()[i].lockKey();
+//                        }
+//                    }
+//                }
+//            }
         frame.add(ourGui);
         frame.setVisible(true);
+    }
+
+    public static HashMap<Player, Boolean> getLocks(Game game){
+        HashMap<Player, Boolean> result = new HashMap<>();
+        for (Player player: game.getPlayers()){
+            result.put(player, false);
+        }
+        return result;
     }
 
     public static Player testPlayer1(){
@@ -74,18 +100,18 @@ public class Main{
     }
 
     public static Level testLevel1(){
-        Level level = new Level(20, 20);
-        level.field = new HashSet<>();
-        level.field.add(new Apple(10, 10));
-        level.field.add(new Wall(15, 15));
-        level.field.add(new Wall(15, 16));
-        level.field.add(new Wall(15, 17));
+        HashSet<fieldItem> field = new HashSet<>();
+        field.add(new Apple(10, 10));
+        field.add(new Wall(15, 15));
+        field.add(new Wall(15, 16));
+        field.add(new Wall(15, 17));
+        Level level = new Level(20, 20, field);
         return level;
     }
 
     public static Game testGame(){
         Game game = new Game(new Player[] {testPlayer1(), testPlayer2()}, new Level[] {testLevel1()});
-        game.currentLevel = testLevel1();
+        game.setCurrentLevel(testLevel1());
         return game;
     }
 }

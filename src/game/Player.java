@@ -10,7 +10,10 @@ public class Player {
 
     private List<SnakePart> snake;
     public List<SnakePart> getSnake() { return snake; }
-    public void increaseSnake() { snake.add(getHead()); }
+    public void increaseSnake() {
+        SnakePart head = getHead();
+        snake.add(head);
+    }
 
     private HashMap<Integer, Direction> controls;
     public HashMap<Integer, Direction> getControls() {return controls; }
@@ -21,14 +24,18 @@ public class Player {
     }
     public void setDirection(Direction dir) { direction = dir; }
 
-    private boolean keyLock;
-    public void lockKey() { keyLock = true; }
-    public void unlockKey() { keyLock = false; }
-    public boolean isKeyLocked() { return keyLock; }
+    private int score;
+    public int getScore(){
+        return score;
+    }
+    public void addScore(int n){
+        this.score += n;
+    }
 
-    public int score;
-
-    public boolean isDead;
+    private boolean isDead;
+    public boolean isDead(){
+        return isDead;
+    }
 
     public void Kill(){
         this.snake = new ArrayList<>();
@@ -52,9 +59,9 @@ public class Player {
         return snake.get(snake.size() - 1);
     }
 
-    public void moveSnake(Direction direction, Level level) {
+    public void moveSnake(Level level) {
         Point position = getHead().position.sum(direction.asPoint());
-        position.loopingInTheField(level.size.x, level.size.y);
+        position.loopingInTheField(level.getSize().x, level.getSize().y);
         SnakePart head = new SnakePart(position.x, position.y);
         this.snake.add(head);
         this.snake.remove(0);

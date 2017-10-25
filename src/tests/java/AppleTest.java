@@ -26,12 +26,12 @@ public class AppleTest {
         Player player = new Player(snake);
 
         Apple greenApple = new Apple(1, 2);
-        Level level = new Level(3, 3);
-        level.field = new HashSet<fieldItem>();
-        level.field.add(greenApple);
+        HashSet<fieldItem> field = new HashSet<>();
+        field.add(greenApple);
+        Level level = new Level(3, 3, field);
         greenApple.onCollision(player, level);
-        assertEquals(100, player.score);
+        assertEquals(100, player.getScore());
         assertEquals(snake.size(), 5);
-        assertEquals(level.field.size(), 1);
+        assertEquals(level.getField().size(), 1);
     }
 }

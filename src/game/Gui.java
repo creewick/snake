@@ -24,18 +24,18 @@ public class Gui extends JPanel implements ActionListener{
     private final int fps = 5;
     private int counter = fps*1;
 
-    private int cellWidth() {return frame.getWidth() / (currentGame.currentLevel.size.x + 1);}
-    private int cellHeight() {return frame.getHeight() / (currentGame.currentLevel.size.y + 1);}
+    private int cellWidth() {return frame.getWidth() / (currentGame.getCurrentLevel().getSize().x + 1);}
+    private int cellHeight() {return frame.getHeight() / (currentGame.getCurrentLevel().getSize().y + 1);}
 
     private Timer mainTimer = new Timer(1000/fps, this);
 
-    Sound bgm = new Sound(new File("music/bgm.wav"));
-    Image background = new ImageIcon("images/bg.jpg").getImage();
-    Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
-    Image snakeHead2 = new ImageIcon("images/bober2.png").getImage();
-    Image snake2Head1 = new ImageIcon("images/sham1.png").getImage();
-    Image snake2Head2 = new ImageIcon("images/sham2.png").getImage();
-    Image poppy = new ImageIcon("images/poppy.jpg").getImage();
+    private Sound bgm = new Sound(new File("music/bgm.wav"));
+    private Image background = new ImageIcon("images/bg.jpg").getImage();
+    private Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
+    private Image snakeHead2 = new ImageIcon("images/bober2.png").getImage();
+    private Image snake2Head1 = new ImageIcon("images/sham1.png").getImage();
+    private Image snake2Head2 = new ImageIcon("images/sham2.png").getImage();
+    private Image poppy = new ImageIcon("images/poppy.jpg").getImage();
 
     public Gui(JFrame frame){
         this.frame = frame;
@@ -62,7 +62,7 @@ public class Gui extends JPanel implements ActionListener{
     }
 
     private void drawObjects(Graphics g){
-        for (fieldItem fieldItem : currentGame.currentLevel.field) {
+        for (fieldItem fieldItem : currentGame.getCurrentLevel().getField()) {
             g.drawImage(new ImageIcon(fieldItem.getClass().getAnnotation(game.Image.class).path()).getImage(),
                     fieldItem.position.x * cellWidth(),
                     fieldItem.position.y * cellHeight(),
@@ -71,9 +71,9 @@ public class Gui extends JPanel implements ActionListener{
     }
 
     private void drawSnakes(Graphics g){
-        for (int i=0; i < currentGame.players.length; i++) {
-            Player player = currentGame.players[i];
-            if (!player.isDead) {
+        for (int i=0; i < currentGame.getPlayers().length; i++) {
+            Player player = currentGame.getPlayers()[i];
+            if (!player.isDead()) {
                 for (SnakePart snakePart : player.getSnake()) {
                     g.drawImage(new ImageIcon(snakePart.getClass().getAnnotation(game.Image.class).path()).getImage(),
                             snakePart.position.x * cellWidth(),
@@ -103,7 +103,9 @@ public class Gui extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         counter--;
-        //рисовать один раз
+        for (Player player: Main.getLocks().keySet()){
+//            Main.getLocks().get(player) = false;
+        }
         if (counter < 0){
             currentGame.nextStep();
         }

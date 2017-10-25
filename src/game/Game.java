@@ -7,12 +7,22 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-
 public class Game {
 
-    public Level currentLevel;
-    public Level[] levels;
-    public Player[] players;
+    private Level currentLevel;
+    public Level getCurrentLevel() {
+        return currentLevel;
+    }
+    public void setCurrentLevel(Level level){
+        currentLevel = level;
+    }
+
+    private Level[] levels;
+    private Player[] players;
+
+    public Player[] getPlayers() {
+        return players;
+    }
 
     public Game(Player[] players, Level[] levels) {
         this.players = players;
@@ -26,32 +36,31 @@ public class Game {
                 snakeParts.add(snakePart);
             }
         }
-        if (!currentPlayer.isDead)
+        if (!currentPlayer.isDead())
             snakeParts.remove(currentPlayer.getHead());
         return snakeParts;
     }
 
     public void nextStep() {
         for (int x = 0; x < players.length; x++)
-            if (!players[x].isDead) {
-                players[x].moveSnake(players[x].getDirection(), currentLevel);
-                players[x].unlockKey();
+            if (!players[x].isDead()) {
+                players[x].moveSnake(currentLevel);
         }
 
         for (Player player : players){
             for (SnakePart snakePart : this.getSnakePartsToCollisionWith(player)) {
-                if (!player.isDead && snakePart.position.equals(player.getHead().position))
+                if (!player.isDead() && snakePart.position.equals(player.getHead().position))
                     snakePart.onCollision(player, currentLevel);
             }
         }
 
         HashSet<fieldItem> oldField = new HashSet<>();
-        for (fieldItem item : currentLevel.field)
+        for (fieldItem item : currentLevel.getField())
             oldField.add(item);
 
         for (Player player : players) {
             for (fieldItem item : oldField) {
-                if (!player.isDead && item.position.equals(player.getHead().position))
+                if (!player.isDead() && item.position.equals(player.getHead().position))
                     item.onCollision(player, currentLevel);
             }
         }

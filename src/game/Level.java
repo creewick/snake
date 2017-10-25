@@ -10,11 +10,18 @@ import java.util.List;
 
 public class Level {
 
-    public HashSet<fieldItem> field;
+    private HashSet<fieldItem> field;
+    public HashSet<fieldItem> getField(){
+        return field;
+    }
 
-    public Point size;
+    private Point size;
+    public Point getSize(){
+        return size;
+    }
 
-    public Level(int x, int y){
+    public Level(int x, int y, HashSet<fieldItem> field){
+        this.field = field;
         this.size = new Point(x, y);
     }
 
