@@ -4,6 +4,7 @@ import game.fieldItems.SnakePart;
 import game.fieldItems.fieldItem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -29,12 +30,25 @@ public class Game {
         this.levels = levels;
     }
 
+    public List<SnakePart> getEvilHeads(Player currentPlayer){
+        List<SnakePart> evilHeads = new ArrayList<>();
+        for (Player player : players){
+            if (!player.isDead())
+                evilHeads.add(player.getHead());
+        }
+        if (!currentPlayer.isDead()){
+            evilHeads.remove(currentPlayer.getHead());
+        }
+        return evilHeads;
+    }
+
     public List<SnakePart> getSnakePartsToCollisionWith(Player currentPlayer){
         List<SnakePart> snakeParts = new ArrayList<>();
         for (Player player : players){
-            for (SnakePart snakePart : player.getSnake()){
-                snakeParts.add(snakePart);
-            }
+            if (!player.isDead())
+                for (SnakePart snakePart : player.getSnake()){
+                    snakeParts.add(snakePart);
+                }
         }
         if (!currentPlayer.isDead())
             snakeParts.remove(currentPlayer.getHead());
@@ -45,6 +59,21 @@ public class Game {
         for (int x = 0; x < players.length; x++)
             if (!players[x].isDead()) {
                 players[x].moveSnake(currentLevel);
+        }
+
+        HashMap<Player, SnakePart> CollisionHeads = new HashMap<>();
+
+        for (Player player : players){
+            if (!player.isDead()){
+                for (SnakePart evilHead : getEvilHeads(player)){
+                    if (evilHead.position.equals(player.getHead()))
+                        CollisionHeads.put(player, evilHead);
+                }
+            }
+        }
+
+        for (Player player : CollisionHeads.keySet()){
+            CollisionHeads.get(player).onCollision(player, currentLevel);
         }
 
         for (Player player : players){
