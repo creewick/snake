@@ -104,7 +104,7 @@ public class Gui extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         counter--;
         for (Player player: Main.getLocks().keySet()){
-//            Main.getLocks().get(player) = false;
+            Main.getLocks().put(player, false);
         }
         if (counter < 0){
             currentGame.nextStep();

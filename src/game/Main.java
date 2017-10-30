@@ -40,7 +40,7 @@ public class Main{
                         Direction oldDirection = player.getDirection();
                         if (newDirection == oldDirection.getLeft() || newDirection == oldDirection.getRight()) {
                             player.setDirection(newDirection);
-//                            locks.get(player) = true;
+                            locks.put(player, true);
                         }
                     }
                 }
