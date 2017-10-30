@@ -11,8 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Graphics;
 import java.awt.Image;
-
-import java.io.File;
+import java.util.HashMap;
 
 
 public class Gui extends JPanel implements ActionListener{
@@ -27,18 +26,15 @@ public class Gui extends JPanel implements ActionListener{
     private int cellWidth() {return frame.getWidth() / (currentGame.getCurrentLevel().getSize().x + 1);}
     private int cellHeight() {return frame.getHeight() / (currentGame.getCurrentLevel().getSize().y + 1);}
 
-    private Timer mainTimer = new Timer(1000/fps, this);
+    private HashMap<String, Image> images;
+    private Sound bgm;
 
-    private Sound bgm = new Sound(new File("music/bgm.wav"));
-    private Image background = new ImageIcon("images/bg.jpg").getImage();
-    private Image snakeHead1 = new ImageIcon("images/bober1.png").getImage();
-    private Image snakeHead2 = new ImageIcon("images/bober2.png").getImage();
-    private Image snake2Head1 = new ImageIcon("images/sham1.png").getImage();
-    private Image snake2Head2 = new ImageIcon("images/sham2.png").getImage();
-    private Image poppy = new ImageIcon("images/poppy.jpg").getImage();
+    private Timer mainTimer = new Timer(1000/fps, this);
 
     public Gui(JFrame frame){
         this.frame = frame;
+        this.images = Resources.getImages();
+        this.bgm = Resources.getSound();
         mainTimer.start();
     }
 
@@ -54,11 +50,11 @@ public class Gui extends JPanel implements ActionListener{
     }
 
     private void drawBackground(Graphics g){
-        g.drawImage(background, 0, 0, frame.getWidth(), frame.getHeight(), null);
+        g.drawImage(images.get("background"), 0, 0, frame.getWidth(), frame.getHeight(), null);
     }
 
     private void drawLogo(Graphics g){
-        g.drawImage(poppy, 100, 0, frame.getWidth() - 200, frame.getHeight() - 100, null);
+        g.drawImage(images.get("poppy"), 100, 0, frame.getWidth() - 200, frame.getHeight() - 100, null);
     }
 
     private void drawObjects(Graphics g){
@@ -81,9 +77,9 @@ public class Gui extends JPanel implements ActionListener{
                             cellWidth(), cellHeight(), null);
                 }
                 if (i == 0) {
-                    animateHead(counter, g, snakeHead1, snakeHead2, player);
+                    animateHead(counter, g, images.get("snakeHead1"), images.get("snakeHead2"), player);
                 } else {
-                    animateHead(counter, g, snake2Head1, snake2Head2, player);
+                    animateHead(counter, g, images.get("snake2Head1"), images.get("snake2Head2"), player);
                 }
             }
         }
