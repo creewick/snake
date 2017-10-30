@@ -66,7 +66,7 @@ public class Game {
         for (Player player : players){
             if (!player.isDead()){
                 for (SnakePart evilHead : getEvilHeads(player)){
-                    if (evilHead.position.equals(player.getHead()))
+                    if (evilHead.position.equals(player.getHead().position))
                         CollisionHeads.put(player, evilHead);
                 }
             }
