@@ -20,7 +20,7 @@ public class Gui extends JPanel implements ActionListener{
     public void setCurrentGame(Game game) { currentGame = game; }
 
     private JFrame frame;
-    private final int fps = 5;
+    private final int fps = 10;
     private int counter = fps*1;
 
     private int cellWidth() {return frame.getWidth() / (currentGame.getCurrentLevel().getSize().x + 1);}

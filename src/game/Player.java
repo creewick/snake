@@ -60,7 +60,7 @@ public class Player {
     }
 
     public void moveSnake(Level level) {
-        Point position = getHead().position.sum(direction.asPoint());
+        Point position = getHead().position.sum(direction.getPoint());
         position.loopingInTheField(level.getSize().x, level.getSize().y);
         SnakePart head = new SnakePart(position.x, position.y);
         this.snake.add(head);

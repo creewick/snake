@@ -1,7 +1,17 @@
 package game;
 
 public enum Direction{
-    Up, Right, Down, Left;
+    Up(new Point(0, -1)),
+    Right(new Point(1, 0)),
+    Down(new Point(0, 1)),
+    Left(new Point(-1, 0));
+
+    private Point point;
+    public Point getPoint() {return this.point; }
+
+    Direction(Point point){
+        this.point = point;
+    }
 
     public Direction getLeft(){
         return Direction.values()[(this.ordinal() + Direction.values().length - 1) % Direction.values().length];
@@ -9,17 +19,5 @@ public enum Direction{
 
     public Direction getRight() {
         return Direction.values()[(this.ordinal() + Direction.values().length + 1) % Direction.values().length];
-    }
-
-    public Point asPoint(){
-        if (this == Direction.Up)
-            return new Point(0, -1);
-        if (this == Direction.Right)
-            return new Point(1, 0);
-        if (this == Direction.Down)
-            return new Point(0, 1);
-        if (this == Direction.Left)
-            return new Point(-1, 0);
-        return new Point(0,0);
     }
 }

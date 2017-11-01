@@ -32,6 +32,7 @@ public class PlayerTest {
         snake.add(new SnakePart(1, 2));
         Player player = new Player(snake);
         player.increaseSnake();
+        assertEquals(2, player.getSnake().size());
         for (SnakePart snakePart : player.getSnake()){
             assertTrue(snakePart.position.equals(new Point(1, 2)));
         }
@@ -57,7 +58,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void moveSnake() {
+    public void moveSnakeBigSnake() {
         List<SnakePart> snake = new ArrayList<>();
         snake.add(new SnakePart(0, 0));
         snake.add(new SnakePart(0, 1));
@@ -84,5 +85,18 @@ public class PlayerTest {
         for (int y = 0; y < player.getSnake().size(); y++) {
             assertTrue(correctResult.get(y).equals(player.getSnake().get(y).position));
         }
+    }
+
+    @Test
+    public void moveSnakeSmallSnake() {
+        List<SnakePart> snake = new ArrayList<>();
+        snake.add(new SnakePart(0, 0));
+        Player player = new Player(snake);
+
+        Level level = new Level(7, 7, new HashSet<fieldItem>());
+
+        player.setDirection(Direction.Left);
+        player.moveSnake(level);
+        assertTrue(player.getSnake().get(0).position.equals(new Point(6, 0)));
     }
 }
